@@ -28,9 +28,9 @@ setJobs(filterData);
         <div>
           <div className="Search">
             <input type="text" onChange={(e) => SetSerch(e.target.value)} />
-            {/* <select name="" id="">
+            <select name="" id="">
                 <option value="delhi">delhi</option>
-            </select> */}
+            </select>
             <button onClick={serchData}>Search</button>
           </div>
           {jobs.map((value) => {

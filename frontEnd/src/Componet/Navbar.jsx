@@ -15,8 +15,7 @@ const Navbar = () => {
               data-bs-target="#navbarText"
               aria-controls="navbarText"
               aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
+              aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">

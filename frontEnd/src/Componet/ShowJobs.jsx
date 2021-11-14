@@ -27,7 +27,7 @@ setJobs(filterData);
       <>
         <div>
           <div className="Search">
-            <input type="text" onChange={(e) => SetSerch(e.target.value)} />
+            <input type="text" onChange={(e) => SetSerch(e.target.value)} placeholder="Serch by location"/>
             <select name="" id="">
                 <option value="delhi">delhi</option>
             </select>

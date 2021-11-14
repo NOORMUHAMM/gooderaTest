@@ -1,10 +1,10 @@
 import React,{useState,useEffect} from 'react'
 import axios from "axios"
-import { useHistory } from 'react-router-dom'
+// import { useHistory } from 'react-router-dom'
 
 
 const PostJob = () => {
-  const history=useHistory()
+//   const history=useHistory()
 
     const[details,setDetails]=useState({title:"",description:"",external:"",publication_date:"",location:"",level:""})
     
@@ -19,7 +19,7 @@ const PostJob = () => {
         e.preventDefault()
         var res = await axios.post("http://localhost:8000/job", details);
         console.log("post=",res)
-        history.push("/")
+        // history.push("/")
 
         
     }

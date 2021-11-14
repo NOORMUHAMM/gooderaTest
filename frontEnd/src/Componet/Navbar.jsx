@@ -26,19 +26,10 @@ const Navbar = () => {
                     Home
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    Features
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    Pricing
-                  </a>
-                </li>
+              
               </ul>
               <span class="navbar-text">
-                Navbar text with an inline element
+                    Login
               </span>
             </div>
           </div>

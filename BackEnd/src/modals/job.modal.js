@@ -30,15 +30,15 @@ const jobSchema = new mongoose.Schema(
     level: {
       type: String,
       required: true,
-    },
-    tags:{
-        type:Array,
-        required:false,
-    },
-    company:{
-        type:Object,
-        required:false
     }
+    // tags:{
+    //     type:Array,
+    //     required:false,
+    // },
+    // company:{
+    //     type:Object,
+    //     required:false
+    // }
   },
   {
     versionKey: false,

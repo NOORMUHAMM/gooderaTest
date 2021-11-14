@@ -3,6 +3,7 @@ import axios from "axios"
 
 const ShowJobs = () => {
 const[jobs,setJobs]=useState([])
+const[serch,SetSerch]=useState("")
 console.log(jobs);
 const get=async()=>{
     try{
@@ -16,17 +17,37 @@ const get=async()=>{
 useEffect(() => {
   get()
 }, [])
+ const serchData = () => {
+   const filterData = jobs.filter((e) => {
+     return e.location.toLowerCase().includes(serch.toLowerCase());
+   });
+setJobs(filterData);
+ };
     return (
-        <>
+      <>
         <div>
-          {jobs.map((value)=>{
-              return(
-                  <p>{value.description}</p>
-              )
+          <div className="Search">
+            <input type="text" onChange={(e) => SetSerch(e.target.value)} />
+            {/* <select name="" id="">
+                <option value="delhi">delhi</option>
+            </select> */}
+            <button onClick={serchData}>Search</button>
+          </div>
+          {jobs.map((value) => {
+            return (
+              <div>
+                <p>{value.title}</p>
+                <p>{value.description}</p>
+                <p>{value.external}</p>
+                <p>{value.level}</p>
+                <p>{value.publication_date}</p>
+                <p>{value.location}</p>
+              </div>
+            );
           })}
         </div>
-        </>
-    )
+      </>
+    );
 }
 
 export default ShowJobs

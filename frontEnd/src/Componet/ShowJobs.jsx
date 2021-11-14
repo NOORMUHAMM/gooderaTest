@@ -36,12 +36,25 @@ setJobs(filterData);
           {jobs.map((value) => {
             return (
               <div>
-                <p>{value.title}</p>
+                <div class="card w-50">
+                  <div class="card-body">
+                    <h5 class="card-title">{value.title}</h5>
+                    <p class="card-text">{value.description}</p>
+                    <p class="card-text">{value.external}</p>
+                    <p class="card-text">{value.level}</p>
+                    <p class="card-text">{value.publication_date}</p>
+                    <p class="card-text">{value.location}</p>
+                    <a href="#" class="btn btn-primary">
+                      Button
+                    </a>
+                  </div>
+                </div>
+                {/* <p>{value.title}</p>
                 <p>{value.description}</p>
                 <p>{value.external}</p>
                 <p>{value.level}</p>
                 <p>{value.publication_date}</p>
-                <p>{value.location}</p>
+                <p>{value.location}</p> */}
               </div>
             );
           })}

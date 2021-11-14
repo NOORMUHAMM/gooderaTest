@@ -1,16 +1,31 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import axios from "axios"
 
 const ShowJobs = () => {
+const[jobs,setJobs]=useState([])
+console.log(jobs);
 const get=async()=>{
+    try{
     var res=await axios.get("http://localhost:8000/job")
-    console.log(res);
+    setJobs(res.data.job)
+    }
+    catch(err){
+        console.log(err);
+    }
 }
-get()
+useEffect(() => {
+  get()
+}, [])
     return (
+        <>
         <div>
-            <h1>hello</h1>
+          {jobs.map((value)=>{
+              return(
+                  <p>{value.description}</p>
+              )
+          })}
         </div>
+        </>
     )
 }
 
